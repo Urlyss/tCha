@@ -9,9 +9,9 @@ tCha is a simple node.js chat .
 
 ### Screenshots
 
-[![Screenshot1]](./screenshots/ScreenShot_1.png?raw=true)
+![Screenshot1](./screenshots/ScreenShot_1.png?raw=true)
 
-[![Screenshot2]](./screenshots/ScreenShot_2.png?raw=true)
+![Screenshot2](./screenshots/ScreenShot_2.png?raw=true)
 
 ## Installation
 
