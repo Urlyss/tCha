@@ -1,0 +1,134 @@
+
+body{
+  overflow-y: hidden;
+}
+
+.message{
+      margin-top: 10px !important;
+      border: none !important;
+      display: block !important;
+      height: max-content !important;
+      width: 19em !important;
+      padding-bottom: 15px;
+      margin-right: 2px;
+      overflow-wrap: break-word !important;
+}
+
+.secondary-content{
+  margin-top: 20px;
+  font-size:xx-small
+}
+
+.av{
+  position: inherit;
+  margin-right: 6em;
+}
+
+.centered-form {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  justify-content: center;
+}
+
+.form-field {
+  margin: 20px 0;
+}
+
+.form-field > * {
+  width: 100%;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 7px;
+}
+
+.form-field input, .form-field select {
+  border: 1px solid #e1e1e1;
+  padding: 10px;
+}
+
+.chat {
+  display: flex;
+}
+
+.chat__sidebar {
+  height: 100vh;
+}
+
+.chat__main {
+  background: linear-gradient(to right,#448aff, #ffab40);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.chat__messages {
+  flex-grow: 1;
+  overflow-y: visible;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.chat__footer {
+  background: rgba(254, 253, 255, 0.25);
+  display: flex;
+  padding: 10px;
+  /*height: 60px;*/
+  flex-shrink: 0;
+}
+
+.chat__footer form {
+  flex-grow: 1;
+  display: flex;
+}
+
+.chat__footer form * {
+  margin-right: 10px;
+}
+
+.chat__footer input {
+  border: none;
+  padding: 10px;
+  flex-grow: 1;
+}
+
+.chat__messages {
+  list-style-type: none;
+  padding: 10px;
+}
+
+.message__title {
+  display: flex;
+  margin-bottom: 2px;
+  margin-top: -18px;
+  font-size: 134%
+}
+
+.message__title h4 {
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.message__title span {
+  color: #999;
+  margin-top:0px;
+}
+.message__body{
+  display:block;
+  margin-top:-30px;
+  margin-left: -57px;
+}
+#username{
+  margin-bottom: 18px;
+  margin-top: -25px;
+  padding-bottom: 7px;
+}
+
+.modal.bottom-sheet{
+  margin-bottom: 6%;
+  width: 30%;
+  height: 70%;
+  margin-left: 57%;
+}

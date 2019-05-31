@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Chat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="/css/materialize.css">
+  <link rel="stylesheet" href="/css/iconfont/material-icons.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="chat" id="body">
+  <div class="modal red lighten-4">
+    <i class="material-icons">warning</i>
+    <div class="modal-content">
+      <h4></h4>
+    </div>
+  </div>
+
+  <div class="chat__sidebar">
+    <a href="#" style="margin-top: 10px;margin-right: 10px;" data-target="users" id="menu" class="btn-floating btn-large waves-effect waves-light sidenav-trigger blue darken-3"><i
+        class="material-icons">menu</i></a>
+    <br><br>
+
+    <ul id="users" class="sidenav">
+      <li>
+        <div class="user-view">
+          <div class="background">
+            <img src="" id="bg" width="100%" height="100%" style="object-fit: cover;">
+          </div>
+          <div><img class="circle" id="logo" src=""></div>
+          <button style="margin-left: 190px;margin-top: -116px;" id='logout' class="btn-floating btn-large waves-effect waves-light red"><i
+              class="material-icons">exit_to_app</i> </button>
+          <h2 id="username"><span class="white-text name"></span></h2>
+        </div>
+      </li>
+      <li>
+        <h5>List of Member :</h5>
+      </li>
+    </ul>
+
+    <ul id='emoji' class="modal bottom-sheet with-header">
+      <li class="collection-header">
+        <h4>Emoji</h4>
+      </li>
+    </ul>
+  </div>
+
+  <div class="chat__main collection z-depth-5 container">
+    <ol id="messages" class="chat__messages"></ol>
+
+    <div class="chat__footer z-depth-3">
+      <form id="message-form">
+        <input name="message" type="text" placeholder="Message" autofocus autocomplete="off" style="width: 50%;">
+        <button class="btn-floating btn-large waves-effect waves-light orange darken-4 submit"><i class="material-icons">send</i></button>
+
+        <button href="#" style="margin-right: 10px;" data-target="emoji" class="btn-floating btn-large waves-effect waves-light modal-trigger blue darken-3">
+          <i class="material-icons">mood</i>
+        </button>
+      </form>
+    </div>
+  </div>
+  <script id="message-template" type="text/template">
+  <div class='row'>    
+  <li class=" message {{sender}} collection-item avatar z-depth-3" style="{{style}}">
+          <img src="images/avatar({{fromId}}).png" class="circle av" style='{{av_style}}'>
+        <div class="message__title {{msg_elts_style}}" style='text-transform: capitalize;'>
+            <span class="secondary-content" style="color:black; {{time_style}}">{{createdAt}}</span>
+          <h3  style="font-size:smaller;">
+          {{from}}
+        </h3>
+        </div><br><br>
+        <div class="message__body">
+          <p class="title" style='font-size:smaller'>{{text}}</p>
+            <span style="margin-left: 80%"><i class="material-icons lu {{msg_elts_style}}" style="margin-left: 30px;">done</i></span>
+        </div>
+      </li>
+    </div>
+
+<script type="text/javascript">
+    logo = document.getElementById('logo')
+    logo.setAttribute('src','images/avatar({{weirdId}}).png')
+
+    bg = document.getElementById('bg')
+    bg.setAttribute('src','images/bg{{weirdIdBg}}.jpg')
+
+    body = document.getElementById('body')
+    body.setAttribute('background','images/bg{{weirdIdBg}}.jpg')
+
+  </script>
+  </script>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/libs/jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.modal').modal();
+    });
+  </script>
+  <script src="/js/libs/moment.js"></script>
+  <script src="/js/libs/mustache.min.js"></script>
+  <script src="/js/libs/deparam.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/chat.js"></script>
+</body>
+
+</html>
