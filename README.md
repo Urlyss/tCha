@@ -2,6 +2,8 @@
 
 tCha is a simple node.js chat .
 
+To test go to [this](https://t-cha.herokuapp.com/) website
+
 # Description 
 ### Features
 * Emoji
